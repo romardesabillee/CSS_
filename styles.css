@@ -1,0 +1,137 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 200vh;
+}
+
+
+.class { color: red }
+#id { color: blue }
+p { color: green }
+
+
+.button:hover {
+    outline: 5px solid blue;
+}
+
+.button:active {
+    transform: scale(0.9);
+    transition: transform 500ms ease-in-out;
+}
+
+.text {
+    margin-top: 20px;
+    display: flex;
+}
+
+.text::before, .text::after {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: blue;
+}
+
+.text::after {
+    background-color: red;
+}
+
+
+ul li::marker {
+    color: blue;
+}
+
+ul[aria-checked="false"] {
+    font-size: 20px;
+}
+
+.rgba {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(136, 32, 32, 0.5);
+}
+
+.margin-padding {
+
+}
+
+
+.position-relative {
+    position: relative;
+    right: -20px;
+    top: 20px;
+    width: fit-content;
+}
+
+.position-fixed {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    padding: 20px;
+    border: 1px solid black;
+}
+
+.position-absolute {
+    position: absolute;
+    right: -80px;
+    bottom: 0;
+}
+
+.position-sticky {
+    position: sticky;
+    top: 30px;
+    margin-top: 20px;
+}
+
+.img {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+.img img {
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.img .first-image {
+    z-index: 2;
+}
+
+.img .second-image {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+}
+
+.overflow {
+    width: 400px;
+    height: 200px;
+    border: 1px solid black;
+    overflow: scroll;
+}
+
+
+/* specificity */
+
+#overflow-id {
+    background-color: blue;
+}
+
+section.overflow {
+    background-color: red;
+}
+
+.overflow {
+    background-color: green !important;
+}
+
+
+
